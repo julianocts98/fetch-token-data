@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-title {
+  margin: 1em auto;
+  width: 20%;
+}
+
+form {
+  display: grid;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1.5em;
+}
+
+form label {
+  font-weight: 900;
+  margin: 0.2em;
+}
+
+form input {
+  margin: 0.2em;
+  border-radius: 5px;
+}
+
+form #fetchBtn {
+  grid-column: 1/-1;
+  margin: 1em 0.2em;
+}

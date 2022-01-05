@@ -1,0 +1,26 @@
+{
+  "name": "fetch-token-data",
+  "version": "1.0.0",
+  "description": "A simple project who aims to fetch ERC-20 token data from the Binance Smart Chain through of a simple NodeJS server and populate a simple formated HTML.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julianocts98/fetch-token-data.git"
+  },
+  "keywords": [],
+  "author": "Juliano Cavalcante Teixeira da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julianocts98/fetch-token-data/issues"
+  },
+  "homepage": "https://github.com/julianocts98/fetch-token-data#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "web3": "^1.6.1"
+  }
+}
