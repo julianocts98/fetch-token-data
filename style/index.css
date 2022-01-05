@@ -6,7 +6,13 @@
 
 .form-title {
   margin: 1em auto;
-  width: 20%;
+  width: max-content;
+}
+
+body {
+  margin: auto;
+  width: auto;
+  min-width: 320px;
 }
 
 form {
@@ -14,7 +20,8 @@ form {
   border: 1px solid black;
   border-radius: 10px;
   padding: 1em;
-  margin: 1.5em;
+  margin: 0.6em auto;
+  width: max-content;
 }
 
 form label {
@@ -24,10 +31,21 @@ form label {
 
 form input {
   margin: 0.2em;
+  width: 320px;
   border-radius: 5px;
 }
 
+form #tokenAddressField:invalid {
+  border-color: red;
+}
+
+form .read-only-field {
+  background-color: #bfc9ca;
+}
+
 form #fetchBtn {
-  grid-column: 1/-1;
-  margin: 1em 0.2em;
+  font-weight: 800;
+  margin: 1em auto;
+  width: max-content;
+  padding: 0.3em;
 }
