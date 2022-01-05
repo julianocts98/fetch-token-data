@@ -10,11 +10,17 @@ These tokens are created and managed through the Smart Contracts that are deploy
 
 To be able to fetch data of the blockchain, we'll use the **web3** library, and we'll also be reading a file with the standard ABI for ERC-20 tokens so we can fetch any basic data of whatever token we want to.
 
-# HOW TO RUN
+# HOW TO INSTALL
 
 1. Clone the repository.
-2. Run `npm install` inside the folder.
-3. Run `npm start`.
+2. Run `npm install` inside the root folder.
+
+# HOW TO RUN
+
+1. Run `npm start` inside the root folder.
+2. Open the `index.html` on your preferred browser.
+3. Insert the hash address of the token's smart contract of your choice in the first field. (You can easily find a lot of different token contracts on [BSCScan Tokens](https://bscscan.com/tokens "Block explorer of the Binance Smart Chain")
+4. Press `Fetch`.
 
 # TODO
 - Improve CSS stylization.
