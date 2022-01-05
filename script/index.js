@@ -7,7 +7,13 @@ const fetchBtn = document.getElementById("fetchBtn");
 
 const httpServer = "http://localhost:3000";
 
-fetchBtn.onclick = async () => {
+tokenAddressField.oninvalid = () => {
+  alert(
+    "Invalid token contract:\nPlease insert a valid smart contract address!"
+  );
+  tokenAddressField.focus();
+};
+
 function updateTokenFields(tokenData) {
   nameField.value = tokenData.name;
   symbolField.value = tokenData.symbol;
@@ -41,5 +47,8 @@ async function fetchDataByAddress() {
 }
 
 fetchBtn.onclick = async () => {
+  if (!tokenAddressField.checkValidity()) {
+    return;
+  }
   await fetchDataByAddress();
 };

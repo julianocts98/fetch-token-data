@@ -20,16 +20,34 @@
         id="tokenAddressField"
         placeholder="0x0000000000000000000000000000000000000000"
         required
+        minlength="42"
+        maxlength="42"
+        pattern="0x[0-9a-zA-Z]{40}"
       />
+      <input type="button" value="Fetch" id="fetchBtn" />
       <label for="nameField">Name:</label>
       <input type="text" id="nameField" readonly />
+      <input type="text" id="nameField" class="read-only-field" readonly />
       <label for="symbolField">Symbol:</label>
       <input type="text" id="symbolField" readonly />
+      <input type="text" id="symbolField" class="read-only-field" readonly />
       <label for="decimalsField">Decimals:</label>
       <input type="number" id="decimalsField" readonly />
+      <input
+        type="number"
+        id="decimalsField"
+        class="read-only-field"
+        readonly
+      />
       <label for="totalSupplyField">Total supply:</label>
       <input type="number" id="totalSupplyField" readonly />
       <input type="button" value="Fetch" id="fetchBtn" />
+      <input
+        type="number"
+        id="totalSupplyField"
+        class="read-only-field"
+        readonly
+      />
     </form>
   </body>
 </html>
