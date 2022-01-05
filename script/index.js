@@ -8,15 +8,20 @@ const fetchBtn = document.getElementById("fetchBtn");
 const httpServer = "http://localhost:3000";
 
 fetchBtn.onclick = async () => {
+function updateTokenFields(tokenData) {
+  nameField.value = tokenData.name;
+  symbolField.value = tokenData.symbol;
+  decimalsField.value = tokenData.decimals;
+  totalSupplyField.value = tokenData.totalSupply;
+}
+
+async function fetchDataByAddress() {
   const urlRequest = httpServer + "/token/" + tokenAddressField.value;
   const response = await fetch(urlRequest);
-
   const dataJson = await response.json();
+
   if ("data" in dataJson) {
-    nameField.value = dataJson.data.name;
-    symbolField.value = dataJson.data.symbol;
-    decimalsField.value = dataJson.data.decimals;
-    totalSupplyField.value = dataJson.data.totalSupply;
+    updateTokenFields(dataJson.data);
   } else {
     const errorMsg =
       "Error!\nCode: " +
@@ -33,4 +38,8 @@ fetchBtn.onclick = async () => {
     );
     tokenAddressField.focus();
   }
+}
+
+fetchBtn.onclick = async () => {
+  await fetchDataByAddress();
 };
